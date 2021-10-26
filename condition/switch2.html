@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let kor = parseInt(prompt("국어점수를 입력하시오."));
+      let math = parseInt(prompt("수학점수를 입력하시오."));
+      let eng = parseInt(prompt("영어점수를 입력하시오."));
+      let jumsu = (kor + math + eng) / 3;
+      switch (parseInt(jumsu / 10)) {
+        case 10:
+        case 9:
+          console.log("A");
+          break;
+        case 8:
+          console.log("B");
+          break;
+        case 7:
+          console.log("C");
+          break;
+        case 6:
+          console.log("D");
+          break;
+        default:
+          console.log("F");
+      }
+    </script>
+  </body>
+</html>
