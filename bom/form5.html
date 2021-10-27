@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly] {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>숫자 맞추기 게임</h3>
+    <p>
+      이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.<br />
+      숫자는 1부터 100사이에 있습니다.
+    </p>
+    <div>
+      <label for="num1">숫자</label>
+      <input type="text" id="num1" name="num1" size="5" />
+      <button type="button" onclick="check()">확인</button>
+    </div>
+    <div>
+      <label for="count">추측횟수</label>
+      <input type="text" id="count" name="count" size="5" readonly />
+    </div>
+    <div>
+      <label for="hint">힌트</label>
+      <input type="text" id="hint" name="hint" readonly />
+    </div>
+    <script>
+      //컴퓨터가 1~100 사이의 임의의 값 가지도록 설정
+      const a = Math.floor(Math.random() * 100) + 1;
+      let count1 = 0;
+      function check() {
+        let num1 = document.querySelector("#num1").value;
+        document.querySelector("#count").value = count1;
+        count1++;
+        let result = "";
+        if (a == num1) {
+          result = "정답입니다.";
+          //정답
+        } else if (a > num1) {
+          //추측란이 작습니다.
+          result = "추측값이 작습니다.";
+        } else if (a < num1) {
+          //추측란이 큽니다.
+          result = "추측값이 큽니다.";
+        }
+        document.querySelector("#hint").value = result;
+      }
+    </script>
+  </body>
+</html>

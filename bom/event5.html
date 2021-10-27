@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="myBtn">실행</button>
+    <p id="demo"></p>
+    <script>
+      //버튼을 클릭하면 demo란에 오늘날짜와 시간이 표시되기
+      let myBtn = document.getElementById("myBtn");
+      myBtn.addEventListener("click", secondFunction);
+      myBtn.addEventListener("mouseover", firstFunction);
+      myBtn.addEventListener("mouseout", thirdFunction);
+      function firstFunction() {
+        document.querySelector("demo").innerHTML += "mouse over!!<br>";
+      }
+      function secondFunction() {
+        document.querySelector("demo").innerHTML += "clicked!!<br>";
+      }
+      function thirdFunction() {
+        document.querySelector("demo").innerHTML += "mouse out!!<br>";
+      }
+    </script>
+  </body>
+</html>
