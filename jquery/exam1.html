@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="../bom/1.jpg" alt="손바닥시계" />
+    <button type="button">이미지변경</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          const img = document.querySelector("img");
+          img.attr("src", "../bom/2.jpg");
+          img.attr("alt", "강아지");
+        });
+      });
+      //버튼 클릭시 이미지 변경
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" id="num1" name="num1" size="10" />
+        <select name="" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" id="num2" name="num2" size="10" />
+        =
+        <input type="text" id="result" name="result" size="10" />
+      </div>
+      <button type="button">계산</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let num1 = $("#num1");
+          let num2 = $("#num2");
+          let op = $("#op");
+          let result = $("#result");
+
+          let sum = 0;
+          switch (op.val()) {
+            case "+":
+              sum = parseInt(num1.val()) + parseInt(num2.val());
+
+              break;
+            case "-":
+              sum = parseInt(num1.val()) - parseInt(num2.val());
+
+              break;
+            case "*":
+              sum = parseInt(num1.val()) * parseInt(num2.val());
+
+              break;
+            case "/":
+              sum = parseInt(num1.val()) / parseInt(num2.val());
+
+              break;
+          }
+          result.val(sum);
+        });
+      });
+    </script>
+  </body>
+</html>
