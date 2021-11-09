@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut blanditiis
+      officia tenetur animi, excepturi minima, illo debitis accusamus quo quod
+      error sequi quos hic ducimus dolore aperiam nisi. Voluptatum autem
+      reprehenderit non saepe sunt laudantium quae iure vitae voluptates
+      doloremque, sint, quasi ex corrupti eos consequatur in consequuntur.
+      Suscipit alias ex odio necessitatibus error, deserunt sed amet non ratione
+      nisi odit. Eveniet distinctio perferendis illo? Illum soluta ut laboriosam
+      corrupti optio. Asperiores quisquam minus, adipisci suscipit aut pariatur
+      quos magnam odit consequatur officia tempora eos unde laudantium similique
+      et illo nostrum veritatis numquam. Voluptates deserunt harum distinctio
+      eos exercitationem facilis, ratione, voluptatum quae repellendus nisi ad
+      excepturi similique nam perferendis odio minus accusamus culpa esse saepe,
+      iure quasi ullam quam! Distinctio maxime, numquam tempore consequuntur
+      quae doloremque tempora nihil vitae quaerat fugit iusto, porro culpa
+      nesciunt recusandae amet quas ea cumque perferendis sed animi impedit!
+      Facilis quaerat aspernatur ab asperiores, necessitatibus fugit
+      exercitationem porro aperiam molestiae facere sit nisi, quasi laudantium
+      dolorum quos pariatur, quae sed! Temporibus iusto error cum corrupti nisi
+      voluptas, necessitatibus hic repellat, eaque quisquam distinctio? Fugiat
+      inventore, enim fuga cumque perspiciatis accusamus quibusdam eveniet
+      quisquam aperiam dolorem veritatis explicabo exercitationem voluptas
+      reprehenderit impedit iusto harum incidunt similique in obcaecati vero,
+      possimus cupiditate laboriosam! Quos quaerat, accusantium, iure unde ullam
+      modi, quae placeat quis totam architecto impedit at aut eos qui iusto
+      quam! Fugiat, libero. Illum eveniet temporibus quidem, enim vitae veniam
+      ex culpa facere voluptate ipsam ipsum provident nesciunt possimus eos
+      veritatis, accusantium ducimus animi voluptatibus impedit rerum, dicta sed
+      hic quos quas. Voluptatum, nisi quidem. Excepturi commodi architecto nisi
+      blanditiis laudantium minus eveniet consectetur doloribus iste, ex odit
+      ipsam. Provident, earum necessitatibus harum quia ex est? Ex nesciunt
+      delectus soluta earum accusamus odio veniam minima pariatur facere! Magni
+      porro molestiae libero dolore dicta doloribus voluptas.
+    </p>
+    <script>
+      //p태그 내용 가져오기
+      let p1 = document.querySelector("p").innerText;
+      console.log("g 플래그 사용");
+      console.log(p1.match(/ipsum/g));
+      console.log(/ipsum/g.test(p1));
+
+      console.log("");
+
+      console.log("gi 플래그 사용");
+      console.log(p1.match(/ipsum/gi));
+      console.log(/ipsum/gi.test(p1));
+      console.log("");
+
+      console.log("gm 플래그 사용");
+      console.log(p1.match(/$/gm));
+      console.log("");
+    </script>
+  </body>
+</html>

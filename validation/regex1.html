@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        자바스크립트 정규식 메소드
+        1) exec() : 대응되는 문자열을 찾는 메소드/정보를 가지고 있는 배열 반환/ 못찾으면 null 반환
+        2) test() : 대응되는 문자열이 있으면 true, 없으면 false 반환
+        3) match() : 대응되는 문자열을 찾는 메소드/정보를 가지고 있는 배열 반환/못찾으면 null 반환
+        4) search() : 대응되는 문자열을 찾아 찾은 인덱스 반환 / 못찾으면 -1 반환
+        5) replace() : 대응되는 문자열을 찾아 다른 문자열로 치환
+        6) split() : 정규식을 기준으로 문자열을 나우어 배열로 반환
+      -->
+    <form action="">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="name" />
+      </div>
+      <button type="button" onclick="nameCheck()">전송</button>
+    </form>
+    <p id="result" style="color: red"></p>
+    <script>
+      function nameCheck() {
+        let name = document.querySelector("[name='name']").value;
+        //이름 가져오기
+        const reg = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]$/;
+        let flag = reg.test(name);
+        //유효성 검증
+        //이름은 한글, 이름은 최소 2자리, 최대 5자리까지 허용
+        if (!flag) {
+          result.innerText = "이름을 확인해주세요";
+        } else {
+          result.innerText = "";
+        }
+      }
+    </script>
+  </body>
+</html>
